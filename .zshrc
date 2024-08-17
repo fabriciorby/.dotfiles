@@ -4,8 +4,8 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-alias zshrc="nvim ~/.zshrc"
-alias zshsrc="source ~/zshr"
+alias e="nvim ~/.zshrc"
+alias r="source ~/.zshrc"
 alias vim="nvim"
 alias vi="nvim"
 alias ll="ls -lash"
