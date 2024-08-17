@@ -1,0 +1,6 @@
+[user]
+name = Fabricio Yamamoto
+email = fabricio.yamamoto@wearewaes.com
+
+[core]
+sshCommand = ssh -i ~/.ssh/github-waes

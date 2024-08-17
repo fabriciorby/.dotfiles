@@ -1,0 +1,7 @@
+# This is Git's per-user configuration file.
+[user]
+	name = fabriciorby
+	email = fabriciorby@hotmail.com
+
+[includeIf "gitdir:~/Desktop/projects/waes/"]
+  path = .gitconfig-waes
