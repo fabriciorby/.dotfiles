@@ -17,3 +17,5 @@ eval "$(jenv init -)"
 
 # fuzzy finder stuff
 source <(fzf --zsh)
+
+cbonsai -p
