@@ -10,7 +10,7 @@ Plug 'tpope/vim-commentary'
 
 set surround
 set highlightedyank
-set sneak
+
 set NERDTree
 set easymotion
 set notimeout

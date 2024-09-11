@@ -1,7 +1,13 @@
 # This is Git's per-user configuration file.
 [user]
-	name = fabriciorby
-	email = fabriciorby@hotmail.com
+	name = Fabricio Yamamoto
+	email = fyamamoto@bol.com
 
 [includeIf "gitdir:~/Desktop/projects/waes/"]
   path = .gitconfig-waes
+
+[includeIf "gitdir:~/Desktop/projects/personal/"]
+  path = .gitconfig-personal
+
+[includeIf "gitdir:~/"]
+  path = .gitconfig-personal

@@ -1,0 +1,6 @@
+[user]
+name = fabriciorby
+email = fabriciorby@hotmail.com
+
+[core]
+sshCommand = ssh -i ~/.ssh/github-personal
