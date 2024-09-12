@@ -1,0 +1,22 @@
+[include]
+    path = themes.gitconfig
+
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    features = gruvmax-fang
+    navigate = true
+    side-by-side = true
+    line-numbers = true
+    true-color = always
+#    syntax-theme = TwoDark
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default

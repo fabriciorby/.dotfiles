@@ -5,3 +5,6 @@
 
 [includeIf "gitdir:~/Desktop/projects/waes/"]
   path = .gitconfig-waes
+
+[include]
+    path = .config/delta/config.gitconfig
