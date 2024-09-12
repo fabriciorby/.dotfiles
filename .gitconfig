@@ -9,5 +9,5 @@
 [includeIf "gitdir:~/Desktop/projects/personal/"]
   path = .gitconfig-personal
 
-[includeIf "gitdir:~/"]
+[includeIf "gitdir:~/.dotfiles/"]
   path = .gitconfig-personal
