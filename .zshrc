@@ -11,6 +11,10 @@ alias vi="nvim"
 alias ll="ls -lash"
 alias c="clear"
 
+bindkey "^F" forward-word
+bindkey "^B" backward-word
+bindkey "^D" backward-kill-word
+
 # jenv stuff
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
