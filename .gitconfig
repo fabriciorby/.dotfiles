@@ -11,3 +11,7 @@
 
 [includeIf "gitdir:~/.dotfiles/"]
   path = .gitconfig-personal
+
+[include]
+    path = .config/delta/themes.gitconfig
+    path = .config/delta/config.gitconfig
