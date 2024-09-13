@@ -8,7 +8,9 @@ alias e="nvim ~/.zshrc"
 alias r="source ~/.zshrc"
 alias vim="nvim"
 alias vi="nvim"
-alias ll="ls -lash"
+alias ls="lsd"
+alias ll="ls -la"
+alias lt="ls -aa --tree"
 alias c="clear"
 
 bindkey "^F" forward-word
