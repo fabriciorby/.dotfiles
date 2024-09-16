@@ -12,6 +12,7 @@ alias ls="lsd"
 alias ll="ls -la"
 alias lt="ls -aa --tree"
 alias c="clear"
+alias cat="bat"
 
 bindkey "^F" forward-word
 bindkey "^B" backward-word
