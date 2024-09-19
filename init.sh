@@ -9,6 +9,9 @@ brew install neovim
 brew install clojure
 brew install borkdude/brew/babashka
 
+# Install Fonts
+cp .fonts/* ~/Library/Fonts/.
+
 # Remap Esc to CapsLock
 touch ~/Library/LaunchAgents/com.local.KeyRemapping.plist
 cat remap.plist >> ~/Library/LaunchAgents/com.local.KeyRemapping.plist
@@ -19,3 +22,5 @@ launchctl load ~/Library/LaunchAgents/com.local.KeyRemapping.plist
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/.dotfiles/.config/iterm2"
 # Tell iTerm2 to use the custom preferences in the directory
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+
+bb init.clj
