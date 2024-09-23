@@ -65,7 +65,7 @@ nnoremap <s-TAB> :action NextTab<CR>
 nnoremap <Leader>en :action EditSourceInNewWindow<CR>
 nnoremap <Leader>n :action NextWindow<CR>
 nnoremap <Leader>q :action CloseContent<CR>
-nnoremap <Leader>qa :action CloseAllEditors<CR>
+nnoremap <Leader>Q :action CloseAllEditors<CR>
 
 """ Editing source code
 set ideajoin
