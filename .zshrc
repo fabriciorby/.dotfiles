@@ -13,6 +13,9 @@ alias ll="ls -la"
 alias lt="ls -aa --tree"
 alias c="clear"
 alias cat="bat"
+alias uri="jq -srR @uri"
+alias urid="jq -srR @urid" #will only work with jq > 1.7.1
+alias html="jq -srR @html"
 
 bindkey "^F" forward-word
 bindkey "^B" backward-word
