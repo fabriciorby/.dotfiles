@@ -27,6 +27,11 @@ eval "$(jenv init -)"
 
 # fuzzy finder stuff
 source <(fzf --zsh)
+source .scripts/fzf-git.sh/fzf-git.sh
+
+# zoxide stuff
+eval "$(zoxide init zsh)"
+alias cd="z"
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/fyamamoto/.rd/bin:$PATH"
