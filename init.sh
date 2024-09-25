@@ -3,11 +3,12 @@ brew install jq
 brew install bat
 brew install git-delta
 brew install fzf
-brew install --cask font-hack-nerd-font
 brew install lsd
 brew install neovim
 brew install clojure
 brew install borkdude/brew/babashka
+brew install zoxide
+brew install lazygit
 
 # Install Fonts
 cp .fonts/* ~/Library/Fonts/.

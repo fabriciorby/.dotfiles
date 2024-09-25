@@ -4,3 +4,4 @@ init.clj
 remap.plist
 \.git
 \.fonts
+\.scripts
