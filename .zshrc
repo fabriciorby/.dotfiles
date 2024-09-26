@@ -27,7 +27,7 @@ eval "$(jenv init -)"
 
 # fuzzy finder stuff
 source <(fzf --zsh)
-source .scripts/fzf-git.sh/fzf-git.sh
+source ~/.dotfiles/.scripts/fzf-git.sh/fzf-git.sh
 
 # zoxide stuff
 eval "$(zoxide init zsh)"
