@@ -9,6 +9,7 @@ brew install clojure
 brew install borkdude/brew/babashka
 brew install zoxide
 brew install lazygit
+brew install --cask nikitabobko/tap/aerospace
 
 # Install Fonts
 cp .fonts/* ~/Library/Fonts/.
