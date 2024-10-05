@@ -27,5 +27,7 @@ defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 
 # remove press and hold
 defaults write -g ApplePressAndHoldEnabled -bool false
+# remove mouse acceleration
+defaults write .GlobalPreferences com.apple.mouse.scaling -1
 
 bb init.clj
