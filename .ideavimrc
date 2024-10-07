@@ -122,7 +122,10 @@ nnoremap gb :action Back<CR>
 nnoremap gf :action Forward<CR>
 nnoremap gu :action ShowUsages<CR>
 nnoremap gj :action QuickJavaDoc<CR>
-nnoremap gD :action QuickImplementations<CR>
+nnoremap gi :action QuickImplementations<CR>
+nnoremap gD :action GotoImplementation<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gr :action GotoTypeDeclaration<CR>
 
 """ Tool windows
 nnoremap <c-p> :action JumpToLastWindow<CR>
