@@ -6,6 +6,7 @@ enum custom_layers {
     SYMB,   // symbols
     MDIA,   // media keys
     VIMK,   // vim keys
+    WKMN,   // workman layout
 };
 
 
@@ -29,7 +30,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *   |LCtrl |  '"  |OptShf| VIM  | LOptn|                                       |  Up  | Down |   [  |   ]  |RCtrl |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        | App  |  L1  |       |  L1  |Ctrl/Esc|
+ *                                        | App  |  L1  |       |  L1  |  L4  |
  *                                 ,------|------|------|       |------+--------+------.
  *                                 |      |      | Home |       | PgUp |        |      |
  *                                 | Space|Backsp|------|       |------|Enter   |Backsp|
@@ -57,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                         KC_H,           KC_J,           KC_K,           KC_L,           KC_SCLN,        RGUI_T(KC_QUOT),
         MEH_T(KC_NO),   KC_N,           KC_M,           KC_COMM,        KC_DOT,         LT(1,KC_SLSH),  KC_RSFT,
                         KC_UP,          KC_DOWN,        KC_LBRC,        KC_RBRC,        RCTL_T(KC_NO),
-        TG(1),          LCTL_T(KC_ESC),
+        TG(1),          TG(4),
         KC_PGUP,
         KC_PGDN, KC_ENT, KC_BSPC
     ),
@@ -185,6 +186,52 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_NO, KC_NO,
         KC_NO,
         KC_NO, KC_NO, KC_NO
+    ),
+/* Keymap 5: Workman
+ *
+ * ,--------------------------------------------------.           ,--------------------------------------------------.
+ * |   `~   |   1  |   2  |   3  |   4  |   5  |Delete|           |  +=  |   6  |   7  |   8  |   9  |   0  |   -    |
+ * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
+ * | Tab    |   Q  |   D  |   R  |   W  |   B  | Caps |           | LCmd |   J  |   F  |   U  |   P  |   ;  |   \    |
+ * |--------+------+------+------+------+------| Lock |           |      |------+------+------+------+------+--------|
+ * | Esc    |   A  |   S  |   H  |   T  |   G  |------|           |------|   Y  |   N  |   E  |   O  |   I  |' / RCmd|
+ * |--------+------+------+------+------+------| Hyper|           | Meh  |------+------+------+------+------+--------|
+ * | LShift | Z/L1 |   X  |   M  |   C  |   V  |      |           |      |   K  |   L  |   ,  |   .  | //L1 | RShift |
+ * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
+ *   |LCtrl |  '"  |OptShf| VIM  | LOptn|                                       |  Up  | Down |   [  |   ]  |RCtrl |
+ *   `----------------------------------'                                       `----------------------------------'
+ *                                        ,-------------.       ,-------------.
+ *                                        | App  |  L1  |       |  L1  |  L4  |
+ *                                 ,------|------|------|       |------+--------+------.
+ *                                 |      |      | Home |       | PgUp |        |      |
+ *                                 | Space|Backsp|------|       |------|Enter   |Backsp|
+ *                                 |      |ace   | End  |       | PgDn |        |ace   |
+ *                                 `--------------------'       `----------------------'
+ */
+// If it accepts an argument (i.e, is a function), it doesn't need KC_.
+// Otherwise, it needs KC_*
+[WKMN] = LAYOUT_ergodox(
+        //Left Hand
+//      |               |               |               |               |               |               |               |
+        KC_GRV,         KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           KC_DEL,
+        KC_TAB,         KC_Q,           KC_D,           KC_R,           KC_W,           KC_B,           KC_CAPS,
+        KC_ESC,         KC_A,           KC_S,           KC_H,           KC_T,           KC_G,
+        KC_LSFT,        LT(1,KC_Z),     KC_X,           KC_M,           KC_C,           KC_V,           ALL_T(KC_NO),
+        LCTL_T(KC_NO),  KC_QUOT,        LALT(KC_LSFT),  LT(3,KC_NO),  KC_LALT,
+        LALT_T(KC_APP), TG(1),
+        KC_HOME,
+        KC_SPC,         KC_LGUI,        KC_END,
+
+        //Right Hand
+//      |               |               |               |               |               |               |               |
+        KC_EQL,         KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_MINS,
+        KC_LGUI,        KC_J,           KC_F,           KC_U,           KC_P,           KC_SCLN,        KC_BSLS,
+                        KC_Y,           KC_N,           KC_E,           KC_O,           KC_I,           RGUI_T(KC_QUOT),
+        MEH_T(KC_NO),   KC_K,           KC_L,           KC_COMM,        KC_DOT,         LT(1,KC_SLSH),  KC_RSFT,
+                        KC_UP,          KC_DOWN,        KC_LBRC,        KC_RBRC,        RCTL_T(KC_NO),
+        TG(1),          TG(4),
+        KC_PGUP,
+        KC_PGDN, KC_ENT, KC_BSPC
     ),
 };
 
