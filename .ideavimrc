@@ -56,10 +56,6 @@ nnoremap <c-=> :action Unsplit<CR>
 nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
 sethandler <c-j> a:vim
 sethandler <c-k> a:vim
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
 nnoremap <TAB> :action PreviousTab<CR>
 nnoremap <s-TAB> :action NextTab<CR>
 nnoremap <Leader>en :action EditSourceInNewWindow<CR>
@@ -84,11 +80,15 @@ nnoremap <Leader>=  :action ReformatCode<CR>
 nnoremap <leader>o :action OptimizeImports<CR>
 nnoremap <leader>i :action Generate<CR>
 nnoremap <leader>/ :action ShowErrorDescription<CR>
+nnoremap <c-k> :action MoveLineUp<CR>
+nnoremap <c-j> :action MoveLineDown<CR>
+nnoremap <c-a> :action ShowIntentionActions<CR>
 
 " File navigation
 map <leader>ff <action>(GotoFile)
 map <leader>fr <action>(RecentFiles)
 map <leader>fc <action>(FindInPath)
+map <leader>fa :action GotoAction<CR>
 map <leader><leader> <Action>(RecentFiles)
 map <leader>fl <action>(RecentLocations)
 map <leader>fs <action>(NewScratchFile)
@@ -108,8 +108,6 @@ map <leader>rr <Action>(Refactorings.QuickListPopupAction)
 """ Searching and Source Code Navigation
 set incsearch
 nnoremap <c-/> :action FindInPath<CR>
-nnoremap <c-a> :action GotoAction<CR>
-nnoremap <c-f> :action GotoFile<CR>
 nnoremap <leader>u :action FindUsages<CR>
 nnoremap <leader>s :action GotoRelated<CR>
 nnoremap <leader>h :action CallHierarchy<CR>
@@ -131,13 +129,19 @@ nnoremap <c-x> :action HideAllWindows<CR>
 """ Running and Debugging
 nnoremap ,r :action ContextRun<CR>
 nnoremap ,c :action RunClass<CR>
-nnoremap ,f :action ChooseRunConfiguration<CR>
+nnoremap ,a :action ChooseRunConfiguration<CR>
 nnoremap ,t :action ActivateRunToolWindow<CR>
 nnoremap ,u :action Rerun<CR>
 nnoremap ,f :action RerunFailedTests<CR>
 nnoremap ,b :action ToggleLineBreakpoint<CR>
 nnoremap ,d :action ContextDebug<CR>
 nnoremap ,n :action ActivateDebugToolWindow<CR>
+nnoremap ,j :action StepOver<CR>
+nnoremap ,k :action StepOut<CR>
+nnoremap ,l :action StepInto<CR>
+vnoremap ,e :action EvaluateExpression<CR>
+nnoremap ,e :action EvaluateExpression<CR>
+
 
 " Jump around with easymotion
 map <leader>j <Plug>(easymotion-s)
@@ -149,5 +153,5 @@ map <leader>gb <Action>(Git.Branches)
 map <leader>gm <Action>(Git.Menu)
 
 " Popup navigation
-inoremap <C-j> <Action>(PopupMenu-selectNext)
-inoremap <C-k> <Action>(PopupMenu-selectPrev)
+"inoremap <C-j> <Action>(PopupMenu-selectNext)
+"inoremap <C-k> <Action>(PopupMenu-selectPrev)
