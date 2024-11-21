@@ -45,3 +45,15 @@ export PATH="/Users/fyamamoto/Desktop/projects/utils:$PATH"
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+alias k="kubectl"
+source <(kubectl completion zsh)
+
+### copy line to clipboard
+function copy_line_to_x_clipboard() {
+    echo -n $BUFFER | pbcopy
+    zle kill-whole-line
+    zle reset-prompt
+}
+zle -N copy_line_to_x_clipboard
+bindkey '^U' copy_line_to_x_clipboard
