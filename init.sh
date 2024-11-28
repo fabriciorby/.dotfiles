@@ -11,6 +11,8 @@ brew install zoxide
 brew install lazygit
 brew install --cask nikitabobko/tap/aerospace
 
+brew install --cask obsidian
+
 # Install Fonts
 cp .fonts/* ~/Library/Fonts/.
 
