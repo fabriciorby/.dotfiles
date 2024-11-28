@@ -26,6 +26,11 @@
     "show": true,
     "show_nav_history_buttons": true
   },
+  "toolbar": {
+    "quick_actions": true, // disable after having a shortcut for all of the selection menu
+    "breadcrumbs": true,
+    "selections_menu": true
+  },
   // editing text
   "use_autoclose": true,
   "soft_wrap": "preferred_line_length",
@@ -53,7 +58,7 @@
   "preview_tabs": {
     "enabled": false,
     "enable_preview_from_file_finder": false,
-    "enable_preview_from_code_navigation": false,
+    "enable_preview_from_code_navigation": false
   },
   // languages
   "prettier": {
@@ -64,4 +69,3 @@
     "enabled": true
   }
 }
-
