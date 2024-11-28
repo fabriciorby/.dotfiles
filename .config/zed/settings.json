@@ -11,25 +11,27 @@
   "autosave": "on_focus_change",
   "format_on_save": "off",
   "confirm_quit": true,
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "ui_font_size": 18,
+  "ui_font_family": "SeriousShanns Nerd Font Mono",
+  "ui_font_weight": 100,
+  "buffer_font_family": "SeriousShanns Nerd Font Mono",
+  "buffer_line_height": "standard",
+  "buffer_font_size": 20,
+  "buffer_font_weight": 100,
   "cursor_blink": false,
   "relative_line_numbers": true,
   "vertical_scroll_margin": 10,
+  "double_click_in_multibuffer": "open",
   // UI
   "active_pane_modifiers": {
-    "border_size": 1.0,
     "inactive_opacity": 0.7
   },
-  // tab_bar to be deleted after getting used to buffer panels
+  // tab_bar
   "tab_bar": {
-    "show": true,
-    "show_nav_history_buttons": true
+    "show": false
   },
   "toolbar": {
-    "quick_actions": true, // disable after having a shortcut for all of the selection menu
-    "breadcrumbs": true,
-    "selections_menu": true
+    "quick_actions": false
   },
   // editing text
   "use_autoclose": true,

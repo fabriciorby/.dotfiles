@@ -14,14 +14,34 @@
       "space g b": "editor::ToggleGitBlame",
       "shift-k": "editor::Hover",
       "space =": "editor::Format",
+      "space s": "workspace::Save",
+      "space shift-s": "workspace::SaveAll",
       "space d": "diagnostics::Deploy",
       "space o": "outline::Toggle",
       "space /": "workspace::NewSearch",
       "n": "search::SelectNextMatch",
       "shift-n": "search::SelectPrevMatch",
-      "g b": "editor::ToggleComments",
+      "space c c": "editor::ToggleComments",
       "ctrl-shift-j": "editor::MoveLineDown",
-      "ctrl-shift-k": "editor::MoveLineUp"
+      "ctrl-shift-k": "editor::MoveLineUp",
+      "space a": ["workspace::SendKeystrokes", "cmd-a"],
+      "ctrl-s l": "pane::SplitRight",
+      "ctrl-s h": "pane::SplitLeft",
+      "ctrl-s j": "pane::SplitDown",
+      "ctrl-s k": "pane::SplitUp",
+      "ctrl-=": "pane::JoinIntoNext",
+      "ctrl-m l": ["workspace::SwapPaneInDirection", "Right"],
+      "ctrl-m h": ["workspace::SwapPaneInDirection", "Left"],
+      "ctrl-m j": ["workspace::SwapPaneInDirection", "Down"],
+      "ctrl-m k": ["workspace::SwapPaneInDirection", "Up"],
+      "g b": "pane::GoBack",
+      "g f": "pane::GoForward",
+      "tab": "pane::ActivatePrevItem",
+      "shift-tab": "pane::ActivateNextItem",
+      "z c": "editor::FoldAt",
+      "z o": "editor::UnfoldAt",
+      "space z c": "editor::FoldAll",
+      "space z o": "editor::UnfoldAll"
     }
   },
   {
@@ -32,11 +52,18 @@
       "\\ e": "zed::OpenKeymap",
       "\\ s": "zed::OpenSettings",
       "shift shift": "file_finder::Toggle", // matches pressing and releasing shift twice
+      "space space": "file_finder::Toggle",
       "space f f": "file_finder::Toggle",
       "space f r": "tab_switcher::Toggle",
+      "space f s": "workspace::NewFile",
+      "space f n": "workspace::NewFile",
       "space t": "workspace::NewCenterTerminal",
       "space x": "workspace::ToggleLeftDock",
-      "space q": "pane::CloseActiveItem"
+      "space q": "pane::CloseActiveItem",
+      "space Q": "pane::CloseAllItems",
+      "space d f": "zed::ToggleFullScreen",
+      "space d d": "workspace::ToggleCenteredLayout",
+      "space tab": ["workspace::SendKeystrokes", "ctrl-tab enter"]
     }
   },
   {
@@ -45,6 +72,12 @@
       "ctrl-z": "workspace::ToggleZoom",
       "cmd-k": ["projects::OpenRecent", { "create_new_window": false }],
       "ctrl-x": "tab_switcher::CloseSelectedItem"
+    }
+  },
+  {
+    "context": "FileFinder",
+    "bindings": {
+      "ctrl-s": "file_finder::ToggleMenu"
     }
   }
 ]
