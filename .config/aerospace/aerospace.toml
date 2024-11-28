@@ -233,7 +233,7 @@ if.app-id = 'dev.zed.Zed'
 run = "move-node-to-workspace 9"
 
 [[on-window-detected]]
-if.app-id = 'com.jetbrains.intellij.ce'
+if.app-id = 'com.jetbrains.intellij'
 run = "move-node-to-workspace 10"
 
 [workspace-to-monitor-force-assignment]
@@ -246,4 +246,4 @@ run = "move-node-to-workspace 10"
 7 = ['secondary','main']
 8 = ['secondary','main']
 9 = ['secondary','main']
-10 = ['secondary', 'main']
+10 = ['secondary','main']
