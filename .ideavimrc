@@ -76,7 +76,7 @@ nnoremap <leader>zc :action CollapseAllRegions<CR>
 nnoremap <leader>zo :action ExpandAllRegions<CR>
 nnoremap <leader>cc :action CommentByLineComment<CR>
 nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
-nnoremap <Leader>=  :action ReformatCode<CR>
+nnoremap <Leader>= :action ReformatCode<CR>
 nnoremap <leader>o :action OptimizeImports<CR>
 nnoremap <leader>i :action Generate<CR>
 nnoremap <leader>/ :action ShowErrorDescription<CR>
@@ -160,7 +160,7 @@ map <leader>gm <Action>(Git.Menu)
 "inoremap <C-j> <Action>(PopupMenu-selectNext)
 "inoremap <C-k> <Action>(PopupMenu-selectPrev)
 
-" Convertions
+" Conversions
 nnoremap <leader>csc :action StringManipulation.ToSnakeCase<CR><Esc>
 vnoremap <leader>csc :action StringManipulation.ToSnakeCase<CR><Esc>
 nnoremap <leader>ccc :action StringManipulation.ToCamelCase<CR><Esc>
