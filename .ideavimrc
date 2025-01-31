@@ -80,8 +80,8 @@ nnoremap <Leader>=  :action ReformatCode<CR>
 nnoremap <leader>o :action OptimizeImports<CR>
 nnoremap <leader>i :action Generate<CR>
 nnoremap <leader>/ :action ShowErrorDescription<CR>
-nnoremap <c-k> :action MoveLineUp<CR>
-nnoremap <c-j> :action MoveLineDown<CR>
+nnoremap <c-K> :action MoveLineUp<CR>
+nnoremap <c-J> :action MoveLineDown<CR>
 nnoremap <c-a> :action ShowIntentionActions<CR>
 inoremap <c-a> :action ShowIntentionActions<CR>
 

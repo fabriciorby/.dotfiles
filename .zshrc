@@ -35,14 +35,7 @@ alias cd="z"
 
 cbonsai -p
 
-source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
-source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
-
-export PATH="/Users/fyamamoto/Desktop/projects/find-my-namespace:$PATH"
 export PATH="/Users/fyamamoto/Desktop/projects/utils:$PATH"
-
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 alias k="kubectl"
 source <(kubectl completion zsh)
@@ -56,3 +49,4 @@ function copy_line_to_x_clipboard() {
 zle -N copy_line_to_x_clipboard
 bindkey '^U' copy_line_to_x_clipboard
 
+defaults write .GlobalPreferences com.apple.mouse.scaling -1
