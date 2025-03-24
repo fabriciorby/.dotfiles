@@ -15,6 +15,7 @@ brew install zoxide
 brew install lazygit
 brew install --cask nikitabobko/tap/aerospace
 brew install --cask zed
+brew install k9s
 brew install jenv
 
 # Prepare Stow
