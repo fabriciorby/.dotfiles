@@ -53,3 +53,7 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 defaults write .GlobalPreferences com.apple.mouse.scaling -1
 
 bb init.clj
+
+# Bol proxer
+brew tap homebrew/homebrew-bol git@gitlab.bol.io:homebrew/homebrew-bol.git
+brew install proxer
