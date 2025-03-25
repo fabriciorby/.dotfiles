@@ -230,7 +230,7 @@ run = "move-node-to-workspace 6"
 
 [[on-window-detected]]
 if.app-id = 'com.cisco.secureclient.gui'
-run = "move-node-to-workspace 6"
+run = ["layout floating", "move-node-to-workspace 6"]
 
 [[on-window-detected]]
 if.app-id = 'dev.zed.Zed'
