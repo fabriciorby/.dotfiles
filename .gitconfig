@@ -8,3 +8,5 @@
 
 [include]
     path = .config/delta/config.gitconfig
+[core]
+	autocrlf = input
