@@ -32,11 +32,6 @@ map <C-c> <Esc>
 """ The Leader Key
 let mapleader=" "
 
-" Open NERDTree (use q to exit)
-map <leader>x :NERDTreeToggle<CR>
-let g:NERDTreeMapActivateNode='l'
-let g:NERDTreeMapJumpParent='h'
-
 """ Distraction Free Mode
 nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
 
@@ -45,14 +40,11 @@ map <leader>dd <action>(ToggleDistractionFreeMode)
 map <leader>dz <action>(ToggleZenMode)
 map <leader>df <action>(ToggleFullScreen)
 
-""" Terminal
-nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
-nnoremap <leader>t :action Terminal.OpenInTerminal<CR>
-
 """ Navigation
-nnoremap <c-\> :action SplitVertically<CR>
-nnoremap <c--> :action SplitHorizontally<CR>
-nnoremap <c-=> :action Unsplit<CR>
+nnoremap <c-s>l :action SplitVertically<CR>
+nnoremap <c-s>j :action SplitHorizontally<CR>
+nnoremap <c-s>h :action Unsplit<CR>
+nnoremap <c-s>k :action Unsplit<CR>
 nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
 sethandler <c-j> a:vim
 sethandler <c-k> a:vim
@@ -75,8 +67,7 @@ nnoremap zo :action ExpandRegion<CR>
 nnoremap <leader>zc :action CollapseAllRegions<CR>
 nnoremap <leader>zo :action ExpandAllRegions<CR>
 nnoremap <leader>cc :action CommentByLineComment<CR>
-nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
-nnoremap <Leader>=  :action ReformatCode<CR>
+nnoremap <Leader>= :action ReformatCode<CR>
 nnoremap <leader>o :action OptimizeImports<CR>
 nnoremap <leader>i :action Generate<CR>
 nnoremap <leader>/ :action ShowErrorDescription<CR>
@@ -90,7 +81,6 @@ map <leader>ff <action>(GotoFile)
 map <leader>fr <action>(RecentFiles)
 map <leader>fc <action>(FindInPath)
 map <leader>fa :action GotoAction<CR>
-map <leader><leader> <Action>(RecentFiles)
 map <leader>fl <action>(RecentLocations)
 map <leader>fs <action>(NewScratchFile)
 nnoremap <leader>h  :action LocalHistory.ShowHistory<CR>
@@ -113,6 +103,7 @@ nnoremap <leader>u :action FindUsages<CR>
 nnoremap <leader>s :action GotoRelated<CR>
 nnoremap <leader>h :action CallHierarchy<CR>
 nnoremap <leader>b :action ShowNavBar<CR>
+nnoremap <leader><leader> :action SearchEverywhere<CR>
 nnoremap <c-s> :action FileStructurePopup<CR>
 nnoremap <c-o> :action GotoSymbol<CR>
 nnoremap gc :action GotoClass<CR>
@@ -125,10 +116,6 @@ nnoremap gi :action QuickImplementations<CR>
 nnoremap gD :action GotoImplementation<CR>
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gr :action GotoTypeDeclaration<CR>
-
-""" Tool windows
-nnoremap <c-p> :action JumpToLastWindow<CR>
-nnoremap <c-x> :action HideAllWindows<CR>
 
 """ Running and Debugging
 nnoremap ,r :action ContextRun<CR>
@@ -143,9 +130,9 @@ nnoremap ,n :action ActivateDebugToolWindow<CR>
 nnoremap ,j :action StepOver<CR>
 nnoremap ,k :action StepOut<CR>
 nnoremap ,l :action StepInto<CR>
+nnoremap ,b :action CompileDirty<CR>
 vnoremap ,e :action EvaluateExpression<CR>
 nnoremap ,e :action EvaluateExpression<CR>
-
 
 " Jump around with easymotion
 map <leader>j <Plug>(easymotion-s)
@@ -165,3 +152,20 @@ nnoremap <leader>csc :action StringManipulation.ToSnakeCase<CR><Esc>
 vnoremap <leader>csc :action StringManipulation.ToSnakeCase<CR><Esc>
 nnoremap <leader>ccc :action StringManipulation.ToCamelCase<CR><Esc>
 vnoremap <leader>ccc :action StringManipulation.ToCamelCase<CR><Esc>
+
+
+""" Tool windows
+map <c-x> <action>(HideAllWindows)
+map <leader>pp <Action>(JumpToLastWindow)
+map <leader>pl <Action>(NextProjectWindow)
+map <leader>ph <Action>(PreviousProjectWindow)
+map <leader>o <Action>(ActivateStructureToolWindow)
+
+""" Terminal
+nnoremap <c-t> :action ActivateTerminalToolWindow<CR>
+"nnoremap <leader>t :action Terminal.OpenInTerminal<CR>
+
+" Open NERDTree (use q to exit)
+map <leader>t :NERDTreeToggle<CR>
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'
