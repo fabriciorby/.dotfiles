@@ -17,6 +17,7 @@ brew install --cask nikitabobko/tap/aerospace
 brew install --cask zed
 brew install k9s
 brew install jenv
+brew install ripgrep
 
 # Prepare Stow
 brew install stow
