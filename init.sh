@@ -18,6 +18,7 @@ brew install --cask zed
 brew install k9s
 brew install jenv
 brew install ripgrep
+brew install tmux
 
 # Prepare Stow
 brew install stow
