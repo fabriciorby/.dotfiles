@@ -29,6 +29,16 @@ eval "$(jenv init -)"
 source <(fzf --zsh)
 source ~/.dotfiles/.scripts/fzf-git.sh/fzf-git.sh
 
+export FZF_ALT_C_OPTS="--preview 'lsd -aa --tree --depth 3 {} | head -200'"
+export FZF_CTRL_R_OPTS="
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+  --color header:italic
+  --header 'Press CTRL-Y to copy command into clipboard'"
+export FZF_CTRL_T_OPTS="
+  --walker-skip .git,node_modules,target
+  --preview '(highlight -O ansi -l {} 2> /dev/null || bat -n --color=always {} || lsd --tree --depth 3 {}) 2> /dev/null | head -200'
+  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+
 # zoxide stuff
 eval "$(zoxide init zsh)"
 alias cd="z"
