@@ -36,6 +36,7 @@ alias cd="z"
 cbonsai -p
 
 export PATH="/Users/fyamamoto/Desktop/projects/utils:$PATH"
+export PATH="/Applications/Intellij IDEA CE.app/Contents/MacOS:$PATH"
 
 alias k="kubectl"
 source <(kubectl completion zsh)
@@ -50,3 +51,16 @@ zle -N copy_line_to_x_clipboard
 bindkey '^U' copy_line_to_x_clipboard
 
 defaults write .GlobalPreferences com.apple.mouse.scaling -1
+
+### TizenStudio shit
+export TIZEN_HOME=~/tizen-studio
+export PATH=${PATH}:~/tizen-studio/tools
+export PATH=${PATH}:~/tizen-studio/tools/ide/bin
+export ANDROID_HOME=/opt/homebrew/share/android-commandlinetools
+
+# Nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+    . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+# End Nix
+
