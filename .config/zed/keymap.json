@@ -2,10 +2,10 @@
   {
     "context": "Dock || Terminal || Editor",
     "bindings": {
-      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown"
     }
   },
   {
@@ -30,10 +30,10 @@
       "ctrl-s j": "pane::SplitDown",
       "ctrl-s k": "pane::SplitUp",
       "ctrl-=": "pane::JoinIntoNext",
-      "ctrl-m l": ["workspace::SwapPaneInDirection", "Right"],
-      "ctrl-m h": ["workspace::SwapPaneInDirection", "Left"],
-      "ctrl-m j": ["workspace::SwapPaneInDirection", "Down"],
-      "ctrl-m k": ["workspace::SwapPaneInDirection", "Up"],
+      "ctrl-m l": "workspace::SwapPaneRight",
+      "ctrl-m h": "workspace::SwapPaneLeft",
+      "ctrl-m j": "workspace::SwapPaneDown",
+      "ctrl-m k": "workspace::SwapPaneUp",
       "g b": "pane::GoBack",
       "g f": "pane::GoForward",
       "tab": "pane::ActivatePrevItem",
