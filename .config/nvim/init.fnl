@@ -1,5 +1,6 @@
-(require :main)
 (require :globals)
 (require :options)
 (require :keymaps)
 (require :autocmd)
+(require :lazy-install)
+(require :main)
