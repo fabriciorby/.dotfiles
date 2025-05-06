@@ -347,7 +347,7 @@
 			<key>Columns</key>
 			<integer>80</integer>
 			<key>Command</key>
-			<string></string>
+			<string>/opt/homebrew/bin/tmux -s main</string>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -369,7 +369,7 @@
 			<key>Cursor Type</key>
 			<integer>2</integer>
 			<key>Custom Command</key>
-			<string>No</string>
+			<string>Yes</string>
 			<key>Custom Directory</key>
 			<string>No</string>
 			<key>Custom Tab Title</key>
@@ -923,7 +923,7 @@
 	<key>OpenNoWindowsAtStartup</key>
 	<false/>
 	<key>OpenTmuxWindowsIn</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>PerPaneBackgroundImage</key>
 	<true/>
 	<key>PointerActions</key>
@@ -982,6 +982,8 @@
 	<key>TabViewType</key>
 	<integer>1</integer>
 	<key>TabsHaveCloseButton</key>
+	<true/>
+	<key>TmuxSyncClipboard</key>
 	<true/>
 	<key>ToolbeltTools</key>
 	<array>
