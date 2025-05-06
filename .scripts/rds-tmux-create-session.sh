@@ -7,7 +7,7 @@ IFS=$'\n\t'
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/Desktop/projects/ ~/Desktop/projects/personal/ -mindepth 1 -maxdepth 1 -type d -exec sh -c "echo {} | cut -d '/' -f 6-" \; | fzf)
+    selected=$(find ~/Desktop/projects ~/Desktop/projects/waes -mindepth 1 -maxdepth 1 -type d -exec sh -c "echo {} | cut -d '/' -f 6-" \; | fzf)
 fi
 
 absolute_path="$HOME/Desktop/projects/$selected"
