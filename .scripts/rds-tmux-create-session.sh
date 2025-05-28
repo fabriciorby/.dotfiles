@@ -7,24 +7,30 @@ IFS=$'\n\t'
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/Desktop/projects/ ~/Desktop/projects/personal/ -mindepth 1 -maxdepth 1 -type d -exec sh -c "echo {} | cut -d '/' -f 6-" \; | fzf)
+    selected=$((find ~/Desktop/projects/ ~/Desktop/projects/personal/ -mindepth 1 -maxdepth 1 -type d -exec sh -c "echo {} | cut -d '/' -f 6-" \;; echo '.dotfiles') | fzf)
 fi
 
-absolute_path="$HOME/Desktop/projects/$selected"
+function get_absolute_path() {
+    if [[ "$1" == ".dotfiles" ]]; then
+        echo "$HOME/$1"
+    else
+        echo "$HOME/Desktop/projects/$selected"
+    fi
+}
 
-if [[ -z $absolute_path ]]; then
+if [[ -z "$(get_absolute_path $selected)" ]]; then
     exit 0
 fi
 
 tmux_running=$(pgrep tmux)
 
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-    tmux new-session -s "$selected" -c "$absolute_path"
+    tmux new-session -s "$selected" -c "$(get_absolute_path $selected)"
     exit 0
 fi
 
 if ! tmux has-session -t="$selected" 2> /dev/null; then
-    tmux new-session -ds "$selected" -c "$absolute_path"
+    tmux new-session -ds "$selected" -c "$(get_absolute_path $selected)"
 fi
 
-tmux switch-client -t "$selected"
+tmux switch-client -t $(echo "$selected" | tr . _)
