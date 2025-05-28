@@ -103,7 +103,7 @@ nnoremap <leader>u :action FindUsages<CR>
 nnoremap <leader>s :action GotoRelated<CR>
 nnoremap <leader>h :action CallHierarchy<CR>
 nnoremap <leader>b :action ShowNavBar<CR>
-nnoremap <leader><leader> :action SearchEverywhere<CR>
+nnoremap <leader>F :action SearchEverywhere<CR>
 nnoremap <c-s> :action FileStructurePopup<CR>
 nnoremap <c-o> :action GotoSymbol<CR>
 nnoremap gc :action GotoClass<CR>
@@ -156,6 +156,7 @@ vnoremap <leader>ccc :action StringManipulation.ToCamelCase<CR><Esc>
 
 """ Tool windows
 map <c-x> <action>(HideAllWindows)
+map <leader>P <Action>(WindowMenu)
 map <leader>pp <Action>(JumpToLastWindow)
 map <leader>pl <Action>(NextProjectWindow)
 map <leader>ph <Action>(PreviousProjectWindow)
