@@ -11,7 +11,7 @@
   {
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
-      "space g b": "editor::ToggleGitBlame",
+      "space g b": "git::Blame",
       "shift-k": "editor::Hover",
       "space =": "editor::Format",
       "space s": "workspace::Save",
@@ -38,8 +38,6 @@
       "g f": "pane::GoForward",
       "tab": "pane::ActivatePrevItem",
       "shift-tab": "pane::ActivateNextItem",
-      "z c": "editor::FoldAt",
-      "z o": "editor::UnfoldAt",
       "space z c": "editor::FoldAll",
       "space z o": "editor::UnfoldAll"
     }
