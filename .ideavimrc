@@ -105,7 +105,7 @@ nnoremap <leader>s :action GotoRelated<CR>
 nnoremap <leader>h :action CallHierarchy<CR>
 nnoremap <leader>b :action ShowNavBar<CR>
 nnoremap <leader>F :action SearchEverywhere<CR>
-nnoremap <c-s> :action FileStructurePopup<CR>
+nnoremap <leader>S :action FileStructurePopup<CR>
 nnoremap <c-o> :action GotoSymbol<CR>
 nnoremap gc :action GotoClass<CR>
 nnoremap gt :action GotoTest<CR>
