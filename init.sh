@@ -20,6 +20,15 @@ brew install jenv
 brew install ripgrep
 brew install tmux
 
+# Prepare Sketchybar
+brew install --cask font-sketchybar-app-font
+brew install --cask sf-symbols
+brew install --cask font-sf-pro
+
+brew tap FelixKratz/formulae
+brew install sketchybar
+brew services start sketchybar
+
 # Prepare Stow
 brew install stow
 rm ~/.zshrc
@@ -53,6 +62,11 @@ defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 defaults write -g ApplePressAndHoldEnabled -bool false
 # remove mouse acceleration
 defaults write .GlobalPreferences com.apple.mouse.scaling -1
+
+# Aerospace Shenaningans
+defaults write com.apple.dock expose-group-apps -bool true && killall Dock
+defaults write com.apple.spaces spans-displays -bool true && killall SystemUIServer
+
 
 bb init.clj
 
