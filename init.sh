@@ -69,5 +69,8 @@ defaults write .GlobalPreferences com.apple.mouse.scaling -1
 defaults write com.apple.dock expose-group-apps -bool true && killall Dock
 defaults write com.apple.spaces spans-displays -bool true && killall SystemUIServer
 
+# Spotify
+brew install --cask spotify
+brew install spicetify-cli
 
 bb init.clj
