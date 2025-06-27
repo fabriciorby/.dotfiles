@@ -29,10 +29,20 @@ brew tap FelixKratz/formulae
 brew install sketchybar
 brew services start sketchybar
 
+# Spotify
+brew install --cask spotify
+brew install spicetify-cli
+
 # Prepare Stow
 brew install stow
 rm ~/.zshrc
 stow .
+
+# Spicetify Marketplace
+curl -fsSL https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh | sh
+spicetify backup apply
+spicetify apply
+
 
 brew install openjdk@17
 brew install openjdk@21
@@ -68,9 +78,5 @@ defaults write .GlobalPreferences com.apple.mouse.scaling -1
 # Aerospace Shenaningans
 defaults write com.apple.dock expose-group-apps -bool true && killall Dock
 defaults write com.apple.spaces spans-displays -bool true && killall SystemUIServer
-
-# Spotify
-brew install --cask spotify
-brew install spicetify-cli
 
 bb init.clj
