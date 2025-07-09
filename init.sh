@@ -60,9 +60,11 @@ brew install --cask obsidian
 cp .fonts/* ~/Library/Fonts/.
 
 # Remap Esc to CapsLock
-touch ~/Library/LaunchAgents/com.local.KeyRemapping.plist
-cat remap.plist >> ~/Library/LaunchAgents/com.local.KeyRemapping.plist
-launchctl load ~/Library/LaunchAgents/com.local.KeyRemapping.plist
+# Removed as it's now impossible to press Caps Lock with QMK
+# Use Customize Modifier Keys menu instead
+# touch ~/Library/LaunchAgents/com.local.KeyRemapping.plist
+# cat remap.plist >> ~/Library/LaunchAgents/com.local.KeyRemapping.plist
+# launchctl load ~/Library/LaunchAgents/com.local.KeyRemapping.plist
 
 # iTerm2
 # Specify the preferences directory
