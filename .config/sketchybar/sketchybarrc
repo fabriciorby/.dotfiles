@@ -97,6 +97,8 @@ source "$ITEM_DIR/svim.sh"
 source "$ITEM_DIR/cpu.sh"
 source "$ITEM_DIR/weather.sh"
 
+sketchybar --add alias "Control Center,WiFi" right
+
 sketchybar --hotload on
 
 # Forcing all item scripts to run (never do this outside of sketchybarrc)
