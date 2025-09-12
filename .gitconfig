@@ -16,3 +16,7 @@
     path = .config/delta/config.gitconfig
 [core]
 	autocrlf = input
+[merge]
+	tool = nvimdiff
+[mergetool]
+	keepBackup = false
