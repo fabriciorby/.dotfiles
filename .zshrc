@@ -1,8 +1,13 @@
-export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
-plugins=(git)
+#zmodload zsh/zprof
 
-source $ZSH/oh-my-zsh.sh
+# export ZSH="$HOME/.oh-my-zsh"
+# ZSH_THEME="robbyrussell"
+# plugins=(git)
+#
+source ~/.dotfiles/.scripts/zsh-defer/zsh-defer.plugin.zsh
+# source $ZSH/oh-my-zsh.sh
+
+eval "$(starship init zsh)"
 
 alias e="nvim ~/.zshrc"
 alias r="source ~/.zshrc"
@@ -23,9 +28,9 @@ bindkey "^D" backward-kill-word
 
 # jenv stuff
 export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
+zsh-defer eval "$(jenv init -)"
 
-# fuzzy finder stuff
+# fuzzy finder stuff (don't defer)
 source <(fzf --zsh)
 source ~/.dotfiles/.scripts/fzf-git.sh/fzf-git.sh
 
@@ -68,3 +73,7 @@ function copy_line_to_x_clipboard() {
 }
 zle -N copy_line_to_x_clipboard
 bindkey '^U' copy_line_to_x_clipboard
+
+export PATH=$PATH:/Users/fabricioyamamoto/.spicetify
+
+#zprof
