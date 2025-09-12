@@ -1,5 +1,5 @@
-# Install OH MY ZSH
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+brew install starship
+git clone https://github.com/romkatv/zsh-defer.git .scripts/zsh-defer # Assuming you have git already
 
 # Install HomeBrew manually and then
 brew install cowsay
@@ -78,7 +78,11 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 defaults write .GlobalPreferences com.apple.mouse.scaling -1
 
 # Aerospace Shenaningans
-defaults write com.apple.dock expose-group-apps -bool true && killall Dock
-defaults write com.apple.spaces spans-displays -bool true && killall SystemUIServer
+# defaults write com.apple.dock expose-group-apps -bool true && killall Dock
+# defaults write com.apple.spaces spans-displays -bool true && killall SystemUIServer
+
+defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0.5
+
 
 bb init.clj
