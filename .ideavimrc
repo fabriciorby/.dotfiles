@@ -88,6 +88,9 @@ map <leader>fs <action>(NewScratchFile)
 nnoremap <leader>H :action LocalHistory.ShowHistory<CR>
 nnoremap ge :action GotoNextError<CR>
 nnoremap gE :action GotoPreviousError<CR>
+map <leader>ft <action>(ShowNavBar)
+map <c-f> <action>(ShowNavBar)
+map <c-h> <action>(LocalHistory.ShowHistory)
 
 " Refactoring
 map <leader>rn <Action>(RenameElement)
@@ -131,9 +134,9 @@ nnoremap ,n :action ActivateDebugToolWindow<CR>
 nnoremap ,j :action StepOver<CR>
 nnoremap ,k :action StepOut<CR>
 nnoremap ,l :action StepInto<CR>
+nnoremap ,h :action Resume<CR>
 nnoremap ,B :action CompileDirty<CR>
 vnoremap ,e :action EvaluateExpression<CR>
-nnoremap ,e :action EvaluateExpression<CR>
 
 " Maven
 nnoremap <leader>mr :action ExternalSystem.ProjectRefreshAction<CR>
