@@ -2,6 +2,16 @@
 
 source ~/.dotfiles/.scripts/zsh-defer/zsh-defer.plugin.zsh
 
+# Defer completion setup to after the prompt
+autoload -Uz compinit
+
+# Use a cache (~/.zcompdump) and only rebuild once a day
+if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
+  zsh-defer compinit -C   # skip security checks if cache < 24h old
+else
+  zsh-defer compinit
+fi
+
 eval "$(starship init zsh)"
 
 alias e="nvim ~/.zshrc"
@@ -40,16 +50,16 @@ export FZF_CTRL_T_OPTS="
   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 
 # zoxide stuff
-eval "$(zoxide init zsh)"
+zsh-defer eval "$(zoxide init zsh)"
 alias cd="z"
 
-cbonsai -p
+cbonsai -S
 
 export PATH="/Users/fyamamoto/Desktop/projects/utils:$PATH"
 export PATH="/Applications/Intellij IDEA CE.app/Contents/MacOS:$PATH"
 
 alias k="kubectl"
-source <(kubectl completion zsh)
+zsh-defer source <(kubectl completion zsh)
 
 ### copy line to clipboard
 function copy_line_to_x_clipboard() {
