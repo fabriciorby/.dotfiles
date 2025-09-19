@@ -5,9 +5,12 @@
 # plugins=(git)
 #
 source ~/.dotfiles/.scripts/zsh-defer/zsh-defer.plugin.zsh
-# source $ZSH/oh-my-zsh.sh
 
 eval "$(starship init zsh)"
+
+# Carrega autocompletion do zsh
+autoload -Uz compinit
+compinit
 
 alias e="nvim ~/.zshrc"
 alias r="source ~/.zshrc"
@@ -33,6 +36,7 @@ zsh-defer eval "$(jenv init -)"
 # fuzzy finder stuff (don't defer)
 source <(fzf --zsh)
 source ~/.dotfiles/.scripts/fzf-git.sh/fzf-git.sh
+source "$HOME/.dotfiles/alias.zsh"
 
 export FZF_ALT_C_OPTS="--preview 'lsd -aa --tree --depth 3 {} | head -200'"
 export FZF_CTRL_R_OPTS="
