@@ -1,0 +1,9 @@
+[16:29:06 2025-06-23] FETCHING Version 2.40.11
+[16:29:06 2025-06-23] CREATING /Users/fabricioyamamoto/.spicetify
+[16:29:06 2025-06-23] DOWNLOADING https://github.com/spicetify/cli/releases/download/v2.40.11/spicetify-2.40.11-darwin-arm64.tar.gz
+[16:29:07 2025-06-23] EXTRACTING /Users/fabricioyamamoto/.spicetify/spicetify.tar.gz
+[16:29:07 2025-06-23] SETTING EXECUTABLE PERMISSIONS TO /Users/fabricioyamamoto/.spicetify/spicetify
+[16:29:07 2025-06-23] REMOVING /Users/fabricioyamamoto/.spicetify/spicetify.tar.gz
+[16:29:07 2025-06-23] APPENDING /Users/fabricioyamamoto/.spicetify to PATH in /Users/fabricioyamamoto/.zshrc
+[16:29:07 2025-06-23] spicetify v2.40.11 was installed successfully to /Users/fabricioyamamoto/.spicetify
+[16:29:07 2025-06-23] Run 'spicetify --help' to get started

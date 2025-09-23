@@ -20,6 +20,9 @@ brew install jenv
 brew install ripgrep
 brew install tmux
 brew install gitmux
+brew install tmuxinator
+brew install direnv
+brew install starship
 
 # Prepare Sketchybar
 brew install --cask font-sketchybar-app-font
