@@ -54,7 +54,7 @@ export FZF_CTRL_T_OPTS="
 zsh-defer eval "$(zoxide init zsh)"
 alias cd="z"
 
-cbonsai -S
+cbonsai -p
 
 export PATH="/Users/fyamamoto/Desktop/projects/utils:$PATH"
 export PATH="/Applications/Intellij IDEA CE.app/Contents/MacOS:$PATH"
