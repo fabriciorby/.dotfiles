@@ -19,6 +19,7 @@ brew install k9s
 brew install jenv
 brew install ripgrep
 brew install tmux
+brew install gitmux
 
 # Prepare Sketchybar
 brew install --cask font-sketchybar-app-font
