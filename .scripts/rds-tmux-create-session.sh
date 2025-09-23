@@ -24,13 +24,13 @@ fi
 
 tmux_running=$(pgrep tmux)
 
-if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-    tmux new-session -s "$selected" -c "$(get_absolute_path $selected)"
-    exit 0
-fi
-
 if ! tmux has-session -t="$selected" 2> /dev/null; then
     tmux new-session -ds "$selected" -c "$(get_absolute_path $selected)"
 fi
 
 tmux switch-client -t $(echo "$selected" | tr . _)
+if [[ -n "$TMUX" ]]; then
+    tmux switch-client -t "$selected"
+else
+    tmux attach-session -t "$selected"
+fi

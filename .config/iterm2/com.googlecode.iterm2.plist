@@ -143,6 +143,8 @@
 	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
+	<key>IRMemory</key>
+	<integer>4</integer>
 	<key>Leader</key>
 	<string>0x77-0x40000-0xd</string>
 	<key>MaxVertically</key>
@@ -339,7 +341,7 @@
 			<key>Columns</key>
 			<integer>80</integer>
 			<key>Command</key>
-			<string>/opt/homebrew/bin/tmux new-session -s main</string>
+			<string>/opt/homebrew/bin/tmux</string>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -364,6 +366,8 @@
 			<string>No</string>
 			<key>Custom Directory</key>
 			<string>No</string>
+			<key>Custom Locale</key>
+			<string>pt_BR.UTF-8</string>
 			<key>Custom Tab Title</key>
 			<string>fgh</string>
 			<key>Custom Window Title</key>
@@ -395,6 +399,8 @@
 			<integer>0</integer>
 			<key>Idle Code</key>
 			<integer>0</integer>
+			<key>Initial Text</key>
+			<string>~/.dotfiles/.scripts/rds-tmux-create-session.sh</string>
 			<key>Initial Use Transparency</key>
 			<true/>
 			<key>Jobs to Ignore</key>
@@ -866,6 +872,8 @@
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
+			<key>Set Local Environment Vars</key>
+			<integer>2</integer>
 			<key>Shortcut</key>
 			<string></string>
 			<key>Show Mark Indicators</key>
