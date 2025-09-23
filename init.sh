@@ -1,4 +1,3 @@
-brew install starship
 git clone https://github.com/romkatv/zsh-defer.git .scripts/zsh-defer # Assuming you have git already
 
 # Install HomeBrew manually and then
@@ -20,6 +19,8 @@ brew install jenv
 brew install ripgrep
 brew install tmux
 brew install gitmux
+brew install direnv
+brew install starship
 
 # Prepare Sketchybar
 brew install --cask font-sketchybar-app-font
@@ -43,7 +44,6 @@ stow .
 curl -fsSL https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh | sh
 spicetify backup apply
 spicetify apply
-
 
 brew install openjdk@17
 brew install openjdk@21
