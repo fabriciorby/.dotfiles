@@ -38,6 +38,7 @@ zsh-defer eval "$(jenv init -)"
 # fuzzy finder stuff (don't defer)
 source <(fzf --zsh)
 source ~/.dotfiles/.scripts/fzf-git.sh/fzf-git.sh
+zsh-defer source "$HOME/.dotfiles/.scripts/alias.zsh"
 
 export FZF_ALT_C_OPTS="--preview 'lsd -aa --tree --depth 3 {} | head -200'"
 export FZF_CTRL_R_OPTS="
