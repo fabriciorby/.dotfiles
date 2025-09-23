@@ -18,18 +18,33 @@ function get_absolute_path() {
     fi
 }
 
-if [[ -z "$(get_absolute_path $selected)" ]]; then
+path="$(get_absolute_path "$selected")"
+tmux_running=$(pgrep tmux || true)
+
+# echo "DEBUG:"
+# echo "  selected = $selected"
+# echo "  path     = $path"
+# echo "  tmux_running = $tmux_running"
+
+if [[ -z "$path" ]]; then
+    echo "path vazio"
     exit 0
 fi
 
-tmux_running=$(pgrep tmux)
+if [[ -z "$tmux_running" ]]; then
+    # echo "Nenhum tmux rodando → criando e entrando na sessão $selected"
+    exec tmux new-session -s "$selected" -c "$path"
+fi
 
-if ! tmux has-session -t="$selected" 2> /dev/null; then
-    tmux new-session -ds "$selected" -c "$(get_absolute_path $selected)"
+if ! tmux has-session -t="$selected" 2>/dev/null; then
+    # echo "Sessão não existe → criando $selected"
+    tmux new-session -ds "$selected" -c "$path"
 fi
 
 if [[ -n "$TMUX" ]]; then
+    # echo "Dentro do tmux → switch-client para $selected"
     tmux switch-client -t "$selected"
 else
-    tmux attach-session -t "$selected"
+    # echo "Fora do tmux → attach na sessão $selected"
+    exec tmux attach-session -t "$selected"
 fi
