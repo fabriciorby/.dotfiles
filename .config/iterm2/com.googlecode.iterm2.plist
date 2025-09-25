@@ -10,6 +10,8 @@
 	<false/>
 	<key>Default Bookmark Guid</key>
 	<string>7CC9B5B1-5BB4-46AC-A989-20FC7D08990A</string>
+	<key>Default Browser Profile Guid</key>
+	<string>D9543448-96F7-42A0-B853-7211A8AD0493</string>
 	<key>DimBackgroundWindows</key>
 	<false/>
 	<key>DimInactiveSplitPanes</key>

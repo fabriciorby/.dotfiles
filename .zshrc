@@ -56,8 +56,8 @@ alias cd="z"
 export PATH="/Users/fabricioyamamoto/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
-source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
-source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+zsh-defer source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+zsh-defer source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 
 export PATH="$HOME/Desktop/projects/find-my-namespace:$PATH"
 export PATH="$HOME/Desktop/projects/utils:$PATH"
