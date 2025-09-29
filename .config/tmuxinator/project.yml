@@ -1,0 +1,10 @@
+name: project
+root: <%= @settings["workspace"] %>
+
+windows:
+  - editor: nvim .
+  - server:
+      layout: main-vertical
+      panes:
+        -
+        -

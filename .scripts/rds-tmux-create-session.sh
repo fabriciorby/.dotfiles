@@ -33,6 +33,9 @@ if [[ -z "$path" ]]; then
     exit 0
 fi
 
+tmuxinator start project -n $selected workspace=$path
+exit 0
+
 if [[ -z "$tmux_running" ]]; then
     echo "Nenhum tmux rodando → criando e entrando na sessão $selected"
     exec tmux new-session -s "$selected" -c "$path"
