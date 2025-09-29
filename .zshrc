@@ -50,6 +50,9 @@ export FZF_CTRL_T_OPTS="
   --preview '(highlight -O ansi -l {} 2> /dev/null || bat -n --color=always {} || lsd --tree --depth 3 {}) 2> /dev/null | head -200'
   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 
+
+export EDITOR=nvim
+
 # zoxide stuff
 zsh-defer eval "$(zoxide init zsh)"
 alias cd="z"
