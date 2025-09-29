@@ -57,7 +57,9 @@ export EDITOR=nvim
 zsh-defer eval "$(zoxide init zsh)"
 alias cd="z"
 
-cbonsai -p
+if [[ -o login ]]; then
+  cbonsai -p
+fi
 
 export PATH="/Users/fyamamoto/Desktop/projects/utils:$PATH"
 export PATH="/Applications/Intellij IDEA CE.app/Contents/MacOS:$PATH"
