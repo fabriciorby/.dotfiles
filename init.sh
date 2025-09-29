@@ -23,7 +23,7 @@ brew install gitmux
 brew install tmuxinator
 brew install direnv
 brew install starship
-brew install neofetch
+brew install fastfetch
 brew install btop
 
 # Prepare Sketchybar
