@@ -1,0 +1,81 @@
+# Theme: custom
+# By: fabriciorby
+
+# Main bg
+theme[main_bg]="#121212"         # normal.black
+
+# Main text color
+theme[main_fg]="#c7c7c7"         # cinza claro custom
+
+# Title color for boxes
+theme[title]="#c7c7c7"           # cinza claro custom
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#5c78ff"           # bright.blue
+
+# Background color of selected item in processes box
+theme[selected_bg]="#5c78ff"     # bright.blue
+
+# Foreground color of selected item in processes box
+theme[selected_fg]="#c7c7c7"     # cinza claro custom
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#666666"     # bright.black
+
+# Misc colors for processes box
+theme[proc_misc]="#ba5aff"       # bright.red/rosa
+
+# Cpu box outline color
+theme[cpu_box]="#666666"         # bright.black
+
+# Memory/disks box outline color
+theme[mem_box]="#666666"         # bright.black
+
+# Net up/down box outline color
+theme[net_box]="#666666"         # bright.black
+
+# Processes box outline color
+theme[proc_box]="#666666"        # bright.black
+
+# Box divider line and small boxes line color
+theme[div_line]="#666666"        # bright.black
+
+# Temperature graph colors
+theme[temp_start]="#905aff"      # bright.green
+theme[temp_mid]="#5c78ff"        # bright.blue
+theme[temp_end]="#ba5aff"        # bright.red
+
+# CPU graph colors
+theme[cpu_start]="#905aff"       # bright.green
+theme[cpu_mid]="#5c78ff"         # bright.blue
+theme[cpu_end]="#ba5aff"         # bright.red
+
+# Mem/Disk free meter
+theme[free_start]="#905aff"      # bright.green
+theme[free_mid]="#5c78ff"        # bright.blue
+theme[free_end]="#ba5aff"        # bright.red
+
+# Mem/Disk cached meter
+theme[cached_start]="#905aff"    # bright.green
+theme[cached_mid]="#5c78ff"      # bright.blue
+theme[cached_end]="#ba5aff"      # bright.red
+
+# Mem/Disk available meter
+theme[available_start]="#905aff" # bright.green
+theme[available_mid]="#5c78ff"   # bright.blue
+theme[available_end]="#ba5aff"   # bright.red
+
+# Mem/Disk used meter
+theme[used_start]="#905aff"      # bright.green
+theme[used_mid]="#5c78ff"        # bright.blue
+theme[used_end]="#ba5aff"        # bright.red
+
+# Download graph colors
+theme[download_start]="#905aff"  # bright.green
+theme[download_mid]="#5c78ff"    # bright.blue
+theme[download_end]="#ba5aff"    # bright-red
+
+# Upload graph colors
+theme[upload_start]="#905aff"    # bright.green
+theme[upload_mid]="#5c78ff"      # bright.blue
+theme[upload_end]="#ba5aff"      # bright.red
