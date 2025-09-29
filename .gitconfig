@@ -16,6 +16,7 @@
     path = .config/delta/config.gitconfig
 [core]
 	autocrlf = input
+	excludesfile = ~/.gitignore-global
 [merge]
 	tool = nvimdiff
 [mergetool]
