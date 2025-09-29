@@ -2,6 +2,7 @@ git clone https://github.com/romkatv/zsh-defer.git .scripts/zsh-defer # Assuming
 
 # Install HomeBrew manually and then
 brew install cowsay
+brew install ripgrep
 brew install jq
 brew install bat
 brew install git-delta
@@ -22,6 +23,8 @@ brew install gitmux
 brew install tmuxinator
 brew install direnv
 brew install starship
+brew install neofetch
+brew install btop
 
 # Prepare Sketchybar
 brew install --cask font-sketchybar-app-font
