@@ -59,8 +59,18 @@ alias cd="z"
 export PATH="/Users/fabricioyamamoto/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
-zsh-defer source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
-zsh-defer source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+### GOOGLE CLOUD SDK - Lazy Load ###
+gcloud_lazy_init() {
+  source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+  source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+  unfunction gcloud_lazy_init
+}
+
+gcloud() {
+  gcloud_lazy_init
+  command gcloud "$@"
+}
+###############################
 
 export PATH="$HOME/Desktop/projects/find-my-namespace:$PATH"
 export PATH="$HOME/Desktop/projects/utils:$PATH"
