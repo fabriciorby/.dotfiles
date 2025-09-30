@@ -1,10 +1,10 @@
 name: home
-root: ~
+root: ~/.dotfiles
 
 windows:
   - main:
       layout: aa7f,154x43,0,0{86x43,0,0,130,67x43,87,0[67x24,87,0,131,67x18,87,25,134]}
       panes:
-        - nvim
+        - lazygit
         - btop
         - shell_command: ["fastfetch -c screenfetch.jsonc && read; exec $SHELL"]
