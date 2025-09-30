@@ -1,0 +1,48 @@
+# ~/.config/lsd/colors.yaml
+user: 230
+group: 187
+
+permission:
+  read: dark_green
+  write: dark_yellow
+  exec: dark_red
+  exec-sticky: 5
+  no-access: 245
+  octal: 6
+  acl: dark_cyan
+  context: cyan
+
+# Gradiente para date: recent -> mid -> old
+date:
+  hour-old: 63   # bright.blue  (arquivos bem recentes)
+  day-old: 99    # bright.green (arquivos de alguns dias)
+  older: 134     # bright.red   (arquivos mais antigos)
+
+# Gradiente para size: small -> medium -> large
+size:
+  none: 245
+  small: 63      # bright.blue  (pequenos)
+  medium: 99     # bright.green (médios)
+  large: 134     # bright.red   (grandes)
+
+inode:
+  valid: 13
+  invalid: 245
+
+links:
+  valid: 13
+  invalid: 245
+
+tree-edge: 245
+
+git-status:
+  default: 245
+  unmodified: 245
+  ignored: 245
+  new-in-index: dark_green
+  new-in-workdir: dark_green
+  typechange: dark_yellow
+  deleted: dark_red
+  renamed: dark_green
+  modified: dark_yellow
+  conflicted: dark_red
