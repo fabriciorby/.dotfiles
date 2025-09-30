@@ -143,7 +143,7 @@ require("lazy").setup({
 			{ "nvim-telescope/telescope-ui-select.nvim" },
 
 			-- Useful for getting pretty icons, but requires a Nerd Font.
-			{ "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
+			-- { "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
 		},
 		config = function()
 			-- Telescope is a fuzzy finder that comes with a lot of different things that
@@ -308,7 +308,7 @@ require("lazy").setup({
 					map("gra", vim.lsp.buf.code_action, "[G]oto Code [A]ction", { "n", "x" })
 
 					-- Find references for the word under your cursor.
-					map("grr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
+					map("gru", require("telescope.builtin").lsp_references, "[G]oto [U]sages")
 
 					-- Jump to the implementation of the word under your cursor.
 					--  Useful when your language has ways of declaring types without an actual implementation.
@@ -511,46 +511,46 @@ require("lazy").setup({
 		end,
 	},
 
-	{ -- Autoformat
-		"stevearc/conform.nvim",
-		event = { "BufWritePre" },
-		cmd = { "ConformInfo" },
-		keys = {
-			{
-				"<leader>f",
-				function()
-					require("conform").format({ async = true, lsp_format = "fallback" })
-				end,
-				mode = "",
-				desc = "[F]ormat buffer",
-			},
-		},
-		opts = {
-			notify_on_error = false,
-			format_on_save = function(bufnr)
-				-- Disable "format_on_save lsp_fallback" for languages that don't
-				-- have a well standardized coding style. You can add additional
-				-- languages here or re-enable it for the disabled ones.
-				local disable_filetypes = { c = true, cpp = true }
-				if disable_filetypes[vim.bo[bufnr].filetype] then
-					return nil
-				else
-					return {
-						timeout_ms = 500,
-						lsp_format = "fallback",
-					}
-				end
-			end,
-			formatters_by_ft = {
-				lua = { "stylua" },
-				-- Conform can also run multiple formatters sequentially
-				-- python = { "isort", "black" },
-				--
-				-- You can use 'stop_after_first' to run the first available formatter from the list
-				-- javascript = { "prettierd", "prettier", stop_after_first = true },
-			},
-		},
-	},
+	-- { -- Autoformat
+	-- 	"stevearc/conform.nvim",
+	-- 	event = { "BufWritePre" },
+	-- 	cmd = { "ConformInfo" },
+	-- 	keys = {
+	-- 		{
+	-- 			"<leader>f",
+	-- 			function()
+	-- 				require("conform").format({ async = true, lsp_format = "fallback" })
+	-- 			end,
+	-- 			mode = "",
+	-- 			desc = "[F]ormat buffer",
+	-- 		},
+	-- 	},
+	-- 	opts = {
+	-- 		notify_on_error = false,
+	-- 		format_on_save = function(bufnr)
+	-- 			-- Disable "format_on_save lsp_fallback" for languages that don't
+	-- 			-- have a well standardized coding style. You can add additional
+	-- 			-- languages here or re-enable it for the disabled ones.
+	-- 			local disable_filetypes = { c = true, cpp = true }
+	-- 			if disable_filetypes[vim.bo[bufnr].filetype] then
+	-- 				return nil
+	-- 			else
+	-- 				return {
+	-- 					timeout_ms = 500,
+	-- 					lsp_format = "fallback",
+	-- 				}
+	-- 			end
+	-- 		end,
+	-- 		formatters_by_ft = {
+	-- 			lua = { "stylua" },
+	-- 			-- Conform can also run multiple formatters sequentially
+	-- 			-- python = { "isort", "black" },
+	-- 			--
+	-- 			-- You can use 'stop_after_first' to run the first available formatter from the list
+	-- 			-- javascript = { "prettierd", "prettier", stop_after_first = true },
+	-- 		},
+	-- 	},
+	-- },
 
 	{ -- Autocompletion
 		"saghen/blink.cmp",
@@ -651,29 +651,29 @@ require("lazy").setup({
 		},
 	},
 
-	{ -- You can easily change to a different colorscheme.
-		-- Change the name of the colorscheme plugin below, and then
-		-- change the command in the config to whatever the name of that colorscheme is.
-		--
-		-- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-		"folke/tokyonight.nvim",
-		priority = 1000, -- Make sure to load this before all the other start plugins.
-		config = function()
-			vim.opt.termguicolors = true
-			vim.opt.background = "dark"
-			---@diagnostic disable-next-line: missing-fields
-			require("tokyonight").setup({
-				styles = {
-					comments = { italic = false }, -- Disable italics in comments
-				},
-			})
-
-			-- Load the colorscheme here.
-			-- Like many other themes, this one has different styles, and you could load
-			-- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-			-- vim.cmd.colorscheme("tokyonight-night")
-		end,
-	},
+	-- { -- You can easily change to a different colorscheme.
+	-- 	-- Change the name of the colorscheme plugin below, and then
+	-- 	-- change the command in the config to whatever the name of that colorscheme is.
+	-- 	--
+	-- 	-- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
+	-- 	"folke/tokyonight.nvim",
+	-- 	priority = 1000, -- Make sure to load this before all the other start plugins.
+	-- 	config = function()
+	-- 		vim.opt.termguicolors = true
+	-- 		vim.opt.background = "dark"
+	-- 		---@diagnostic disable-next-line: missing-fields
+	-- 		require("tokyonight").setup({
+	-- 			styles = {
+	-- 				comments = { italic = false }, -- Disable italics in comments
+	-- 			},
+	-- 		})
+	--
+	-- 		-- Load the colorscheme here.
+	-- 		-- Like many other themes, this one has different styles, and you could load
+	-- 		-- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
+	-- 		-- vim.cmd.colorscheme("tokyonight-night")
+	-- 	end,
+	-- },
 	{
 		"nyoom-engineering/oxocarbon.nvim",
 		config = function()
@@ -686,12 +686,12 @@ require("lazy").setup({
 		end,
 	},
 	-- Highlight todo, notes, etc in comments
-	{
-		"folke/todo-comments.nvim",
-		event = "VimEnter",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		opts = { signs = false },
-	},
+	-- {
+	-- 	"folke/todo-comments.nvim",
+	-- 	event = "VimEnter",
+	-- 	dependencies = { "nvim-lua/plenary.nvim" },
+	-- 	opts = { signs = false },
+	-- },
 
 	{ -- Collection of various small independent plugins/modules
 		"echasnovski/mini.nvim",
@@ -702,14 +702,14 @@ require("lazy").setup({
 			--  - va)  - [V]isually select [A]round [)]paren
 			--  - yinq - [Y]ank [I]nside [N]ext [Q]uote
 			--  - ci'  - [C]hange [I]nside [']quote
-			require("mini.ai").setup({ n_lines = 500 })
+			-- require("mini.ai").setup({ n_lines = 500 })
 
 			-- Add/delete/replace surroundings (brackets, quotes, etc.)
 			--
 			-- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
 			-- - sd'   - [S]urround [D]elete [']quotes
 			-- - sr)'  - [S]urround [R]eplace [)] [']
-			require("mini.surround").setup()
+			-- require("mini.surround").setup()
 
 			-- Simple and easy statusline.
 			--  You could remove this setup call if you don't like it,
