@@ -778,6 +778,13 @@ require("lazy").setup({
 		--    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
 	},
 	{
+		"preservim/nerdtree",
+		cmd = "NERDTreeToggle", -- carrega só quando você chamar
+		keys = {
+			{ "<leader>n", "<cmd>NERDTreeToggle<CR>", desc = "Toggle NERDTree" },
+		},
+	},
+	{
 		"mfussenegger/nvim-jdtls",
 	},
 	{
