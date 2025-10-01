@@ -247,7 +247,16 @@ require("lazy").setup({
 			-- Mason must be loaded before its dependents so we need to set it up here.
 			-- NOTE: `opts = {}` is the same as calling `require('mason').setup({})`
 			{ "williamboman/mason.nvim", opts = {} },
-			"williamboman/mason-lspconfig.nvim",
+			{
+				"williamboman/mason-lspconfig.nvim",
+				opts = {
+					automatic_enable = {
+						exclude = {
+							"jdtls",
+						},
+					},
+				},
+			},
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 
 			-- Useful status updates for LSP.
@@ -748,6 +757,7 @@ require("lazy").setup({
 				"query",
 				"vim",
 				"vimdoc",
+				"java",
 			},
 			-- Autoinstall languages that are not installed
 			auto_install = true,
@@ -766,6 +776,9 @@ require("lazy").setup({
 		--    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
 		--    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
 		--    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+	},
+	{
+		"mfussenegger/nvim-jdtls",
 	},
 	{
 		"udayvir-singh/tangerine.nvim",
