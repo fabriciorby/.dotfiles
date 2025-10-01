@@ -90,4 +90,8 @@ if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
 fi
 # End Nix
 
+# Powerline
+# export PATH="$HOME/Library/Python/3.13/bin:$HOME/.local/bin:$PATH"
+# . $HOME/Library/Python/3.13/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+
 #zprof
