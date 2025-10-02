@@ -3,8 +3,11 @@
 (fn M.setup []
     (local project-name (vim.fn.fnamemodify (vim.fn.getcwd) ":p:h:t"))
     (local workspace-dir (.. (vim.fn.expand "~/.local/share/nvim/workspace/") project-name))
+    (local java-dir (vim.fn.expand "~/.jenv/versions/21/bin/java"))
+    (local jdtls-launcher (vim.fn.expand "~/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_1.7.0.v20250519-0528.jar"))
+    (local jdtls-config (vim.fn.expand "~/.local/share/nvim/mason/packages/jdtls/config_mac_arm/"))
     (local config
-           {:cmd [:/Users/fabriciorby/.jenv/versions/21/bin/java
+           {:cmd [java-dir
                   :-Declipse.application=org.eclipse.jdt.ls.core.id1
                   :-Dosgi.bundles.defaultStartLevel=4
                   :-Declipse.product=org.eclipse.jdt.ls.core.product
@@ -17,9 +20,9 @@
                   :--add-opens
                   :java.base/java.lang=ALL-UNNAMED
                   :-jar
-                  :/Users/fabriciorby/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_1.7.0.v20250519-0528.jar
+                  jdtls-launcher
                   :-configuration
-                  :/Users/fabriciorby/.local/share/nvim/mason/packages/jdtls/config_mac_arm/
+                  jdtls-config
                   :-data workspace-dir]
             :init_options {:bundles {}}
             :root_dir ((. (require :jdtls.setup) :find_root) [:.git :mvnw :gradlew])
