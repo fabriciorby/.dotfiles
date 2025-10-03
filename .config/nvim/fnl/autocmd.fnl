@@ -1,4 +1,4 @@
-(require-macros :hibiscus.vim)
+(import-macros {: augroup!} :hibiscus.vim)
 
 ; [[ Basic Autocommands ]]
 ;  See `:help lua-guide-autocommands`
@@ -8,7 +8,7 @@
 ;  See `:help vim.highlight.on_yank()`
 
 (augroup! :highlight-yank
-  [[TextYankPost :desc "Highlight when yanking (copying) text"]
+  [["TextYankPost" :desc "Highlight when yanking (copying) text"]
    * #(vim.highlight.on_yank {:timeout 80})])
 
 ; Java
