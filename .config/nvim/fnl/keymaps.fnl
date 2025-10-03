@@ -1,5 +1,4 @@
-(require-macros :hibiscus.vim)
-
+(import-macros {: map!} :hibiscus.vim)
 ; [[ Basic Keymaps ]]
 ;  See `:help map!()`
 
