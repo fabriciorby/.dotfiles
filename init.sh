@@ -12,6 +12,8 @@ brew install git-delta
 brew install fzf
 brew install lsd
 brew install neovim
+brew install luarocks
+brew install rust
 brew install clojure
 brew install borkdude/brew/babashka
 brew install zoxide
