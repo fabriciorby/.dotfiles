@@ -40,6 +40,7 @@ source <(fzf --zsh)
 source ~/.dotfiles/.scripts/fzf-git.sh/fzf-git.sh
 zsh-defer source "$HOME/.dotfiles/.scripts/alias.zsh"
 
+# export FZF_DEFAULT_COMMAND="find * -type f | fzf > selected"
 export FZF_ALT_C_OPTS="--preview 'lsd -aa --tree --depth 3 {} | head -200'"
 export FZF_CTRL_R_OPTS="
   --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
