@@ -163,8 +163,10 @@
 	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
+	<key>LanguageAgnosticKeyBindings</key>
+	<true/>
 	<key>Leader</key>
-	<string>0x77-0x40000-0xd</string>
+	<string>0x62-0x100000-0xb</string>
 	<key>MaxVertically</key>
 	<false/>
 	<key>NeverBlockSystemShutdown</key>
@@ -432,410 +434,61 @@
 			</array>
 			<key>Keyboard Map</key>
 			<dict>
-				<key>0x2b-0x60000-0x18</key>
+				<key>0x7f-0x100000</key>
 				<dict>
 					<key>Action</key>
-					<integer>26</integer>
-					<key>Apply Mode</key>
-					<integer>0</integer>
-					<key>Escaping</key>
-					<integer>2</integer>
+					<integer>11</integer>
 					<key>Text</key>
-					<string>7CC9B5B1-5BB4-46AC-A989-20FC7D08990A</string>
-					<key>Version</key>
-					<integer>2</integer>
+					<string>0x15</string>
 				</dict>
-				<key>0x2d-0x40000-0x1b</key>
+				<key>0x7f-0x80000</key>
 				<dict>
 					<key>Action</key>
-					<integer>28</integer>
-					<key>Apply Mode</key>
-					<integer>0</integer>
-					<key>Escaping</key>
-					<integer>2</integer>
+					<integer>11</integer>
 					<key>Text</key>
-					<string>7CC9B5B1-5BB4-46AC-A989-20FC7D08990A</string>
-					<key>Version</key>
-					<integer>2</integer>
+					<string>0x1b 0x7f</string>
 				</dict>
-				<key>0x3d-0x40000-0x18</key>
-				<dict>
-					<key>Action</key>
-					<integer>27</integer>
-					<key>Apply Mode</key>
-					<integer>0</integer>
-					<key>Escaping</key>
-					<integer>2</integer>
-					<key>Text</key>
-					<string>7CC9B5B1-5BB4-46AC-A989-20FC7D08990A</string>
-					<key>Version</key>
-					<integer>2</integer>
-				</dict>
-				<key>0x5c-0x40000-0x2a</key>
-				<dict>
-					<key>Action</key>
-					<integer>29</integer>
-					<key>Apply Mode</key>
-					<integer>0</integer>
-					<key>Escaping</key>
-					<integer>2</integer>
-					<key>Text</key>
-					<string>7CC9B5B1-5BB4-46AC-A989-20FC7D08990A</string>
-					<key>Version</key>
-					<integer>2</integer>
-				</dict>
-				<key>0x68-0x1000000-0x4</key>
-				<dict>
-					<key>Action</key>
-					<integer>18</integer>
-					<key>Apply Mode</key>
-					<integer>0</integer>
-					<key>Escaping</key>
-					<integer>2</integer>
-					<key>Text</key>
-					<string></string>
-					<key>Version</key>
-					<integer>2</integer>
-				</dict>
-				<key>0x6a-0x1000000-0x26</key>
-				<dict>
-					<key>Action</key>
-					<integer>21</integer>
-					<key>Apply Mode</key>
-					<integer>0</integer>
-					<key>Escaping</key>
-					<integer>2</integer>
-					<key>Text</key>
-					<string></string>
-					<key>Version</key>
-					<integer>2</integer>
-				</dict>
-				<key>0x6b-0x1000000-0x28</key>
-				<dict>
-					<key>Action</key>
-					<integer>20</integer>
-					<key>Apply Mode</key>
-					<integer>0</integer>
-					<key>Escaping</key>
-					<integer>2</integer>
-					<key>Text</key>
-					<string></string>
-					<key>Version</key>
-					<integer>2</integer>
-				</dict>
-				<key>0x6c-0x1000000-0x25</key>
-				<dict>
-					<key>Action</key>
-					<integer>19</integer>
-					<key>Apply Mode</key>
-					<integer>0</integer>
-					<key>Escaping</key>
-					<integer>2</integer>
-					<key>Text</key>
-					<string></string>
-					<key>Version</key>
-					<integer>2</integer>
-				</dict>
-				<key>0xf700-0x220000</key>
+				<key>f702-0x280000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[1;2A</string>
+					<string>b</string>
 				</dict>
-				<key>0xf700-0x240000</key>
+				<key>f702-0x300000</key>
+				<dict>
+					<key>Action</key>
+					<integer>11</integer>
+					<key>Text</key>
+					<string>0x1</string>
+				</dict>
+				<key>f703-0x280000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[1;5A</string>
+					<string>f</string>
 				</dict>
-				<key>0xf700-0x260000</key>
+				<key>f703-0x300000</key>
+				<dict>
+					<key>Action</key>
+					<integer>11</integer>
+					<key>Text</key>
+					<string>0x5</string>
+				</dict>
+				<key>f728-0x0</key>
+				<dict>
+					<key>Action</key>
+					<integer>11</integer>
+					<key>Text</key>
+					<string>0x4</string>
+				</dict>
+				<key>f728-0x80000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[1;6A</string>
-				</dict>
-				<key>0xf701-0x220000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;2B</string>
-				</dict>
-				<key>0xf701-0x240000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;5B</string>
-				</dict>
-				<key>0xf701-0x260000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;6B</string>
-				</dict>
-				<key>0xf702-0x220000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;2D</string>
-				</dict>
-				<key>0xf702-0x240000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;5D</string>
-				</dict>
-				<key>0xf702-0x260000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;6D</string>
-				</dict>
-				<key>0xf703-0x220000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;2C</string>
-				</dict>
-				<key>0xf703-0x240000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;5C</string>
-				</dict>
-				<key>0xf703-0x260000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;6C</string>
-				</dict>
-				<key>0xf704-0x20000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;2P</string>
-				</dict>
-				<key>0xf704-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;5P</string>
-				</dict>
-				<key>0xf705-0x20000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;2Q</string>
-				</dict>
-				<key>0xf705-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;5Q</string>
-				</dict>
-				<key>0xf706-0x20000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;2R</string>
-				</dict>
-				<key>0xf706-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;5R</string>
-				</dict>
-				<key>0xf707-0x20000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;2S</string>
-				</dict>
-				<key>0xf707-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;5S</string>
-				</dict>
-				<key>0xf708-0x20000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[15;2~</string>
-				</dict>
-				<key>0xf708-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[15;5~</string>
-				</dict>
-				<key>0xf709-0x20000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[17;2~</string>
-				</dict>
-				<key>0xf709-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[17;5~</string>
-				</dict>
-				<key>0xf70a-0x20000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[18;2~</string>
-				</dict>
-				<key>0xf70a-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[18;5~</string>
-				</dict>
-				<key>0xf70b-0x20000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[19;2~</string>
-				</dict>
-				<key>0xf70b-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[19;5~</string>
-				</dict>
-				<key>0xf70c-0x20000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[20;2~</string>
-				</dict>
-				<key>0xf70c-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[20;5~</string>
-				</dict>
-				<key>0xf70d-0x20000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[21;2~</string>
-				</dict>
-				<key>0xf70d-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[21;5~</string>
-				</dict>
-				<key>0xf70e-0x20000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[23;2~</string>
-				</dict>
-				<key>0xf70e-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[23;5~</string>
-				</dict>
-				<key>0xf70f-0x20000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[24;2~</string>
-				</dict>
-				<key>0xf70f-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[24;5~</string>
-				</dict>
-				<key>0xf710-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[25;5~</string>
-				</dict>
-				<key>0xf711-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[26;5~</string>
-				</dict>
-				<key>0xf712-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[28;5~</string>
-				</dict>
-				<key>0xf729-0x20000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;2H</string>
-				</dict>
-				<key>0xf729-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;5H</string>
-				</dict>
-				<key>0xf72b-0x20000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;2F</string>
-				</dict>
-				<key>0xf72b-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;5F</string>
+					<string>d</string>
 				</dict>
 			</dict>
 			<key>Load Shell Integration Automatically</key>
