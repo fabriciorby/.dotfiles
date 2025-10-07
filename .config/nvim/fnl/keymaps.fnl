@@ -30,4 +30,8 @@
 (map! [:n] :<C-S-h> :<C-w>H "Move window to the left")
 (map! [:n] :<C-S-l> :<C-w>L "Move window to the right")
 (map! [:n] :<C-S-j> :<C-w>J "Move window to the lower")
-(map! [:n] :<C-S-k> :<C-w>K "Move window to the upper")	
+(map! [:n] :<C-S-k> :<C-w>K "Move window to the upper")
+
+; Plugin related keymaps
+(map! [:n] :- :<CMD>Oil<CR> "Open parent directory")
+
