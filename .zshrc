@@ -71,6 +71,9 @@ gcloud() {
   gcloud_lazy_init
   command gcloud "$@"
 }
+
+export GOOGLE_CLOUD_PROJECT="bolcom-pro-gemini-poc"
+
 ###############################
 
 export PATH="$HOME/Desktop/projects/find-my-namespace:$PATH"
