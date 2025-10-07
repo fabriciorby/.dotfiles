@@ -460,6 +460,7 @@ require("lazy").setup({
 					},
 				},
 			})
+
 			vim.lsp.config('fennel_language_server', {
 			    -- replace it with true path
 			    cmd = {'fennel-language-server'},
@@ -759,6 +760,21 @@ require("lazy").setup({
 		--    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
 		--    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
 	},
+  {
+    "mason-org/mason-lspconfig.nvim",
+    opts = {
+      automatic_enable = {
+        exclude = {
+          "jdtls",
+          "kotlin_lsp"
+        }
+      }
+    },
+    dependencies = {
+        { "mason-org/mason.nvim", opts = {} },
+        "neovim/nvim-lspconfig",
+    },
+  },
 	{
 		"preservim/nerdtree",
 		cmd = "NERDTreeToggle", -- carrega só quando você chamar
@@ -766,9 +782,42 @@ require("lazy").setup({
 			{ "<leader>n", "<cmd>NERDTreeToggle<CR>", desc = "Toggle NERDTree" },
 		},
 	},
+  {
+    'stevearc/oil.nvim',
+    ---@module 'oil'
+    ---@type oil.SetupOpts
+    opts = {},
+    -- Optional dependencies
+    dependencies = { { "nvim-mini/mini.icons", opts = {} } },
+    -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
+    -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
+    lazy = false,
+  },
 	{
 		"mfussenegger/nvim-jdtls",
 	},
+  {
+    "AlexandrosAlexiou/kotlin.nvim",
+    ft = { "kotlin" },
+    dependencies = { "mason.nvim", "mason-lspconfig.nvim", "oil.nvim" },
+    config = function()
+        require("kotlin").setup {
+            -- Optional: Specify root markers for multi-module projects
+            root_markers = {
+                "gradlew",
+                ".git",
+                "mvnw",
+                "settings.gradle",
+            },
+            -- Optional: Specify a custom Java path to run the server
+            jre_path = os.getenv("JDK21"),
+            -- Optional: Specify additional JVM arguments
+            jvm_args = {
+                "-Xmx4g",
+            },
+        }
+    end,
+  },
 	{
 		"udayvir-singh/tangerine.nvim",
 	},
