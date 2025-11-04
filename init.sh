@@ -1,7 +1,10 @@
+#!/bin/zsh
+
 git clone https://github.com/romkatv/zsh-defer.git .scripts/zsh-defer # Assuming you have git already
 
 # Install HomeBrew manually and then
 brew install cowsay
+brew install cbonsai
 brew install ripgrep
 brew install jq
 brew install bat
@@ -15,6 +18,7 @@ brew install zoxide
 brew install lazygit
 brew install --cask nikitabobko/tap/aerospace
 brew install --cask zed
+brew install kubectl
 brew install k9s
 brew install jenv
 brew install ripgrep
