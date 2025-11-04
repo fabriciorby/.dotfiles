@@ -177,10 +177,16 @@ require("lazy").setup({
 				--   },
 				-- },
 				pickers = {
-          find_files = {
-            hidden = true
-          }
-        },
+					find_files = {
+						hidden = true,
+					},
+					live_grep = {
+						file_ignore_patterns = { "node_modules", ".git" },
+						additional_args = function(_)
+							return { "--hidden" }
+						end,
+					},
+				},
 				extensions = {
 					["ui-select"] = {
 						require("telescope.themes").get_dropdown(),
@@ -449,37 +455,37 @@ require("lazy").setup({
 			--  - settings (table): Override the default settings passed when initializing the server.
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 
-			vim.lsp.config('lua_ls', {
+			vim.lsp.config("lua_ls", {
 				settings = {
 					Lua = {
 						completion = {
 							callSnippet = "Replace",
 						},
 						-- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-						diagnostics = { disable = { 'missing-fields' } },
+						diagnostics = { disable = { "missing-fields" } },
 					},
 				},
 			})
 
-			vim.lsp.config('fennel_language_server', {
-			    -- replace it with true path
-			    cmd = {'fennel-language-server'},
-			    filetypes = {'fennel'},
-			    single_file_support = true,
-			    -- source code resides in directory `fnl/`
-			    root_dir = vim.fs.root(0, { ".git", "fnl" }) or vim.fn.getcwd(),
-			    settings = {
-			      fennel = {
-				workspace = {
-				  -- If you are using hotpot.nvim or aniseed,
-				  -- make the server aware of neovim runtime files.
-				  library = vim.api.nvim_list_runtime_paths(),
+			vim.lsp.config("fennel_language_server", {
+				-- replace it with true path
+				cmd = { "fennel-language-server" },
+				filetypes = { "fennel" },
+				single_file_support = true,
+				-- source code resides in directory `fnl/`
+				root_dir = vim.fs.root(0, { ".git", "fnl" }) or vim.fn.getcwd(),
+				settings = {
+					fennel = {
+						workspace = {
+							-- If you are using hotpot.nvim or aniseed,
+							-- make the server aware of neovim runtime files.
+							library = vim.api.nvim_list_runtime_paths(),
+						},
+						diagnostics = {
+							globals = { "vim" },
+						},
+					},
 				},
-				diagnostics = {
-				  globals = {'vim'},
-				},
-			      },
-			    },
 			})
 			-- Ensure the servers and tools above are installed
 			--
@@ -499,7 +505,6 @@ require("lazy").setup({
 				"stylua", -- Used to format Lua code
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
-
 		end,
 	},
 
@@ -760,21 +765,21 @@ require("lazy").setup({
 		--    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
 		--    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
 	},
-  {
-    "mason-org/mason-lspconfig.nvim",
-    opts = {
-      automatic_enable = {
-        exclude = {
-          "jdtls",
-          "kotlin_lsp"
-        }
-      }
-    },
-    dependencies = {
-        { "mason-org/mason.nvim", opts = {} },
-        "neovim/nvim-lspconfig",
-    },
-  },
+	{
+		"mason-org/mason-lspconfig.nvim",
+		opts = {
+			automatic_enable = {
+				exclude = {
+					"jdtls",
+					"kotlin_lsp",
+				},
+			},
+		},
+		dependencies = {
+			{ "mason-org/mason.nvim", opts = {} },
+			"neovim/nvim-lspconfig",
+		},
+	},
 	{
 		"preservim/nerdtree",
 		cmd = "NERDTreeToggle", -- carrega só quando você chamar
@@ -782,42 +787,42 @@ require("lazy").setup({
 			{ "<leader>n", "<cmd>NERDTreeToggle<CR>", desc = "Toggle NERDTree" },
 		},
 	},
-  {
-    'stevearc/oil.nvim',
-    ---@module 'oil'
-    ---@type oil.SetupOpts
-    opts = {},
-    -- Optional dependencies
-    dependencies = { { "nvim-mini/mini.icons", opts = {} } },
-    -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
-    -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
-    lazy = false,
-  },
+	{
+		"stevearc/oil.nvim",
+		---@module 'oil'
+		---@type oil.SetupOpts
+		opts = {},
+		-- Optional dependencies
+		dependencies = { { "nvim-mini/mini.icons", opts = {} } },
+		-- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
+		-- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
+		lazy = false,
+	},
 	{
 		"mfussenegger/nvim-jdtls",
 	},
-  {
-    "AlexandrosAlexiou/kotlin.nvim",
-    ft = { "kotlin" },
-    dependencies = { "mason.nvim", "mason-lspconfig.nvim", "oil.nvim" },
-    config = function()
-        require("kotlin").setup {
-            -- Optional: Specify root markers for multi-module projects
-            root_markers = {
-                "gradlew",
-                ".git",
-                "mvnw",
-                "settings.gradle",
-            },
-            -- Optional: Specify a custom Java path to run the server
-            jre_path = os.getenv("JDK21"),
-            -- Optional: Specify additional JVM arguments
-            jvm_args = {
-                "-Xmx4g",
-            },
-        }
-    end,
-  },
+	{
+		"AlexandrosAlexiou/kotlin.nvim",
+		ft = { "kotlin" },
+		dependencies = { "mason.nvim", "mason-lspconfig.nvim", "oil.nvim" },
+		config = function()
+			require("kotlin").setup({
+				-- Optional: Specify root markers for multi-module projects
+				root_markers = {
+					"gradlew",
+					".git",
+					"mvnw",
+					"settings.gradle",
+				},
+				-- Optional: Specify a custom Java path to run the server
+				jre_path = os.getenv("JDK21"),
+				-- Optional: Specify additional JVM arguments
+				jvm_args = {
+					"-Xmx4g",
+				},
+			})
+		end,
+	},
 	{
 		"udayvir-singh/tangerine.nvim",
 	},
