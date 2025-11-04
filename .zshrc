@@ -76,8 +76,6 @@ function copy_line_to_x_clipboard() {
 zle -N copy_line_to_x_clipboard
 bindkey '^U' copy_line_to_x_clipboard
 
-defaults write .GlobalPreferences com.apple.mouse.scaling -1
-
 ### TizenStudio shit
 export TIZEN_HOME=~/tizen-studio
 export PATH=${PATH}:~/tizen-studio/tools
@@ -93,5 +91,7 @@ fi
 # Powerline
 # export PATH="$HOME/Library/Python/3.13/bin:$HOME/.local/bin:$PATH"
 # . $HOME/Library/Python/3.13/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 #zprof
