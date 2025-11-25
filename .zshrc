@@ -12,6 +12,14 @@ else
   zsh-defer compinit
 fi
 
+# Configure zsh
+export HISTSIZE=20000
+setopt correctall #autocorrect
+setopt hist_ignore_all_dups
+setopt autocd
+setopt extendedglob
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(starship init zsh)"
 
 alias e="nvim ~/.zshrc"
@@ -92,7 +100,5 @@ fi
 # Powerline
 # export PATH="$HOME/Library/Python/3.13/bin:$HOME/.local/bin:$PATH"
 # . $HOME/Library/Python/3.13/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
-
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 #zprof
