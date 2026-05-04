@@ -1,3 +1,5 @@
+# Kiro CLI pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh"
 #zmodload zsh/zprof
 
 source ~/.dotfiles/.scripts/zsh-defer/zsh-defer.plugin.zsh
@@ -11,6 +13,13 @@ if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
 else
   zsh-defer compinit
 fi
+
+# Configure zsh
+export HISTSIZE=20000
+setopt correctall #autocorrect
+setopt hist_ignore_all_dups
+setopt autocd
+setopt extendedglob
 
 eval "$(starship init zsh)"
 
@@ -62,7 +71,7 @@ if [[ -o login ]]; then
   cbonsai -p
 fi
 
-export PATH="/Users/fyamamoto/Desktop/projects/utils:$PATH"
+export PATH="/Users/fabriciorby/Desktop/projects/utils:$PATH"
 export PATH="/Applications/Intellij IDEA CE.app/Contents/MacOS:$PATH"
 
 alias k="kubectl"
@@ -96,3 +105,12 @@ fi
 # . $HOME/Library/Python/3.13/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
 
 #zprof
+
+# Kiro CLI post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh"
+
+# Added by Antigravity
+export PATH="/Users/fabriciorby/.antigravity/antigravity/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/fabriciorby/.antigravity/antigravity/bin:$PATH"
