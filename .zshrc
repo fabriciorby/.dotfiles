@@ -13,7 +13,10 @@ else
 fi
 
 # Configure zsh
+export HISTFILE=~/.zsh_history
 export HISTSIZE=20000
+export SAVEHIST=20000
+setopt SHARE_HISTORY
 setopt correctall #autocorrect
 setopt hist_ignore_all_dups
 setopt autocd
