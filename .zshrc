@@ -42,9 +42,11 @@ bindkey "^F" forward-word
 bindkey "^B" backward-word
 bindkey "^D" backward-kill-word
 
-# jenv stuff
-export PATH="$HOME/.jenv/bin:$PATH"
-zsh-defer eval "$(jenv init -)"
+# jenv stuff (só onde existir)
+if (( $+commands[jenv] )) || [[ -d $HOME/.jenv/bin ]]; then
+  export PATH="$HOME/.jenv/bin:$PATH"
+  zsh-defer eval "$(jenv init -)"
+fi
 
 # fuzzy finder stuff (don't defer)
 source <(fzf --zsh)
@@ -54,7 +56,7 @@ zsh-defer source "$HOME/.dotfiles/.scripts/alias.zsh"
 # export FZF_DEFAULT_COMMAND="find * -type f | fzf > selected"
 export FZF_ALT_C_OPTS="--preview 'lsd -aa --tree --depth 3 {} | head -200'"
 export FZF_CTRL_R_OPTS="
-  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | ~/.dotfiles/.scripts/clip)+abort'
   --color header:italic
   --header 'Press CTRL-Y to copy command into clipboard'"
 export FZF_CTRL_T_OPTS="
@@ -69,30 +71,24 @@ export EDITOR=nvim
 zsh-defer eval "$(zoxide init zsh)"
 alias cd="z"
 
-if [[ -o login ]]; then
+if [[ -o login ]] && (( $+commands[cbonsai] )); then
   cbonsai -p
 fi
 
-export PATH="/Users/fyamamoto/Desktop/projects/utils:$PATH"
-export PATH="/Applications/Intellij IDEA CE.app/Contents/MacOS:$PATH"
-
-alias k="kubectl"
-zsh-defer source <(kubectl completion zsh)
+if (( $+commands[kubectl] )); then
+  alias k="kubectl"
+  zsh-defer source <(kubectl completion zsh)
+fi
 
 ### copy line to clipboard
 function copy_line_to_x_clipboard() {
-    echo -n $BUFFER | pbcopy
+    echo -n $BUFFER | ~/.dotfiles/.scripts/clip
     zle kill-whole-line
     zle reset-prompt
 }
 zle -N copy_line_to_x_clipboard
 bindkey '^U' copy_line_to_x_clipboard
 
-### TizenStudio shit
-export TIZEN_HOME=~/tizen-studio
-export PATH=${PATH}:~/tizen-studio/tools
-export PATH=${PATH}:~/tizen-studio/tools/ide/bin
-export ANDROID_HOME=/opt/homebrew/share/android-commandlinetools
 
 # Nix
 if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then

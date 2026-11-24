@@ -1,0 +1,6 @@
+#!/bin/sh
+# Copia stdin pro clipboard: pbcopy no Mac; senão OSC 52 (funciona por SSH no iTerm2/tmux)
+if command -v pbcopy >/dev/null 2>&1; then
+  exec pbcopy
+fi
+printf '\033]52;c;%s\a' "$(base64 | tr -d '\n')" > /dev/tty
