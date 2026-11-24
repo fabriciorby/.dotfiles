@@ -6,3 +6,4 @@ remap.plist
 \.fonts
 \.scripts
 \.cmk
+nas-bootstrap\.sh
